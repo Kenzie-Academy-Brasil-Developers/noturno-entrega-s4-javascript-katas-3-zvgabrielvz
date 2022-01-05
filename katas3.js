@@ -1,8 +1,9 @@
 const sampleArray = [469, 755, 244, 245, 758, 450, 302, 17, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
 
-function showResults() {
+function showResults(x) {
     let newdiv = document.createElement("div");
-    newdiv.appendChild(att);
+    newdiv.innerHTML = x;
+    document.body.appendChild(newdiv);
 }
 
 
@@ -12,13 +13,13 @@ function kata1() {
     for(let i = 1; i <= 25; i++) {
         arrayup25.push(i);
     }
-    let att = arrayup25.toString();
-    let newdiv = document.createElement("div");
-    newdiv.appendChild(att);
-    return att
+    let x = arrayup25.toString();
+    showResults(x);
+    return x
+
 }
 kata1();
-showResults();
+
 
 
 function kata2() {
@@ -26,7 +27,8 @@ function kata2() {
     for(let i = 25; i > 0; i--) {
         arraydown25.push(i);
     }
-    console.log(arraydown25)
+    let kata2 = arraydown25.toString();
+    return kata2
 }
 kata2()
 
