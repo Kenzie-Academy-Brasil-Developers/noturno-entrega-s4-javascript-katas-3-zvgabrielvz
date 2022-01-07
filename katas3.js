@@ -3,8 +3,41 @@ const sampleArray = [469, 755, 244, 245, 758, 450, 302, 17, 712, 71, 456, 21, 39
 function showResults(x) {
     let newdiv = document.createElement("div");
     newdiv.innerHTML = x;
-    document.body.appendChild(newdiv);
+    let divs = document.getElementById("container");
+    divs.appendChild(newdiv);
 }
+
+let button = document.getElementById('button');
+button.addEventListener('click', everyfunctions);
+
+function reset() {
+    let divs = document.getElementById("container");
+    divs.innerHTML = "";
+}
+
+
+function everyfunctions() {
+    setTimeout(function(){ reset();}, 800)
+    setTimeout(function(){ kata1();}, 1250)
+    setTimeout(function(){ kata2();}, 1400)
+    setTimeout(function(){ kata3();}, 1550)
+    setTimeout(function(){ kata4();}, 1700)
+    setTimeout(function(){ kata5();}, 1850)
+    setTimeout(function(){ kata6();}, 2000)
+    setTimeout(function(){ kata7();}, 2150)
+    setTimeout(function(){ kata8();}, 2300)
+    setTimeout(function(){ kata9();}, 2450)
+    setTimeout(function(){ kata10();}, 2600)
+    setTimeout(function(){ kata11();}, 2750)
+    setTimeout(function(){ kata12();}, 2900)
+    setTimeout(function(){ kata13();}, 3050)
+    setTimeout(function(){ kata14();}, 3200)
+    setTimeout(function(){ kata15();}, 3350)
+    setTimeout(function(){ kata16();}, 3500)
+    setTimeout(function(){ kata17();}, 3650)
+    setTimeout(function(){ kata18();}, 3800)
+}
+
 
 
 
@@ -18,38 +51,38 @@ function kata1() {
     return x
 
 }
-kata1();
-
-
 
 function kata2() {
     let arraydown25= [];
     for(let i = 25; i > 0; i--) {
         arraydown25.push(i);
     }
-    let kata2 = arraydown25.toString();
-    return kata2
+    let x = arraydown25.toString();
+    showResults(x)
+    return x
 }
-kata2()
+
 
 function kata3() {
     let arraydownegat25= [];
     for(let i = -1; i >= -25; i--) {
         arraydownegat25.push(i);
     }
-    console.log(arraydownegat25)
+    let x = arraydownegat25.toString();
+    showResults(x)
+    return x
 }
 
-kata3()
 
 function kata4() {
     let arrayupnegat25= [];
     for(let i = -25; i <= -1; i++) {
         arrayupnegat25.push(i);
     }
-    console.log(arrayupnegat25)
+    let x = arrayupnegat25.toString();
+    showResults(x)
+    return x
 }
-kata4()
 
 function kata5() {
     let arrayodd25= [];
@@ -59,9 +92,10 @@ function kata5() {
             arrayodd25.push(i);
         }
     }
-    console.log(arrayodd25)
+    let x = arrayodd25.toString();
+    showResults(x)
+    return x
 }
-kata5()
 
 function kata6() {
     let arraydiv3= [];
@@ -71,21 +105,24 @@ function kata6() {
             arraydiv3.push(i);
         }
     }
-    console.log(arraydiv3)
+    let x = arraydiv3.toString();
+    showResults(x)
+    return x
 }
-kata6();
 
 function kata7() {
-    let arraydiv3= [];
+    let arraydiv7= [];
     for(let i = 1; i <= 100; i++) {
         
         if(i % 7 === 0) {
-            arraydiv3.push(i);
+            arraydiv7.push(i);
         }
     }
-    console.log(arraydiv3)
+    let x = arraydiv7.toString();
+    showResults(x)
+    return x
 }
-kata7();
+
 function kata8() {
     let arraydiv37= [];
     for(let i = 100; i >= 1; i--) {
@@ -94,9 +131,10 @@ function kata8() {
             arraydiv37.push(i);
         }
     }
-    console.log(arraydiv37)
+    let x = arraydiv37.toString();
+    showResults(x)
+    return x
 }
-kata8();
 
 function kata9() {
     let arrayodd5= [];
@@ -106,15 +144,17 @@ function kata9() {
             arrayodd5.push(i);
         }
     }
-    console.log(arrayodd5)
+    let x = arrayodd5.toString();
+    showResults(x)
+    return x
 }
-kata9();
 
 function kata10() {
-    
-    console.log(sampleArray)
+    let x = sampleArray;
+    showResults(x)
+    return x
+   
 }
-kata10();
 
 function kata11() {
     let arraypairelemts = []
@@ -124,9 +164,11 @@ function kata11() {
         }
 
     }
-    console.log(arraypairelemts)
+    let x = arraypairelemts.toString();
+    showResults(x)
+    return x
 }
-kata11();
+
 
 function kata12() {
     let arrayoddelemts = []
@@ -136,9 +178,11 @@ function kata12() {
         }
 
     }
-    console.log(arrayoddelemts)
+    let x = arrayoddelemts.toString();
+    showResults(x)
+    return x
 }
-kata12();
+
 
 
 function kata13() {
@@ -148,36 +192,42 @@ function kata13() {
             arraydiv8.push(sampleArray[i])
         }
     }
-    console.log(arraydiv8)
+    let x = arraydiv8.toString();
+    showResults(x)
+    return x
 }
-kata13();
+
 
 function kata14() {
     let arraysquare = []
     for(let i = 0; i < sampleArray.length; i++) {
         arraysquare.push(sampleArray[i]*sampleArray[i])
    }
-    console.log(arraysquare)
+   let x = arraysquare.toString();
+   showResults(x)
+   return x
 }
-kata14()
+
 
 function kata15() {
     let sum = 0;
     for(let i = 1; i <= 20; i++) {
         sum = sum + i;
    }
-    console.log(sum)
+   let x = sum;
+   showResults(x)
+   return x
 }
-kata15();
 
 function kata16() {
     let sumsampleArray = 0;
     for(let i = 0; i < sampleArray.length; i++) {
         sumsampleArray = sumsampleArray + sampleArray[i];
    }
-    console.log(sumsampleArray)
+   let x = sumsampleArray.toString();
+   showResults(x)
+   return x
 }
-kata16();
 
 function kata17() {
     let minumber = sampleArray[0];
@@ -191,9 +241,10 @@ function kata17() {
        }
        
    }
-    console.log(minumber)
+   let x = minumber;
+   showResults(x)
+   return x
 }
-kata17()
 
 function kata18() {
     let maxnumber = sampleArray[0];
@@ -207,9 +258,10 @@ function kata18() {
        }
        
    }
-    console.log(maxnumber)
+   let x = maxnumber;
+   showResults(x)
+   return x
 }
-kata18();
 
 /**
  * Daqui em diante são os bônus, por sua conta e risco
